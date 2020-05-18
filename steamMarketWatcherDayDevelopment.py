@@ -45,6 +45,7 @@ if(len(wb.sheetnames) > len(cases)):
 	wb.remove(wb["Sheet"])
 while(end):
 	if(int(time.time())-start_time > 600):
+		print(str((int(time.time())%(24*3600)//3600)+2)+":"+str((int(time.time())%(3600)//60)))
 		for i, sheet in enumerate(wb):
 			max_rows = str(sheet.max_row+1)
 			if(sheet.max_row == 1):
